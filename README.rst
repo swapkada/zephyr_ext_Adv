@@ -29,14 +29,14 @@ Intel x86, ARC, NIOS II, Tensilica Xtensa, and RISC V, and a large number of
 
 BLE5 Support:
 *****************
-   BLE advertsing is Supported in both Host and Controller side.
-   Supported Features:
-   1)Exetdned Advertsing with 257 bytes of data
-   2)scanning for extended Advertsing.
-   
-   APPLICATION:
-   1)beacon_ble5 :zephyr_ext_Adv/samples/bluetooth/beacon_ble5
-   2)scanner_ble5 : zephyr_ext_Adv/samples/bluetooth/scanner_ble5
+BLE advertsing is Supported in both Host and Controller side.
+Supported Features:
+1)Exetdned Advertsing with 257 bytes of data
+2)scanning for extended Advertsing.
+
+APPLICATION:
+1)beacon_ble5 :zephyr_ext_Adv/samples/bluetooth/beacon_ble5
+2)scanner_ble5 : zephyr_ext_Adv/samples/bluetooth/scanner_ble5
       
 
 Community Support
