@@ -25,6 +25,18 @@ Intel x86, ARC, NIOS II, Tensilica Xtensa, and RISC V, and a large number of
 
 .. start_include_here
 
+
+
+BLE5 Support:
+*****************
+   BLE advertsing is Supported in both Host and Controller side.
+   Supported Features:
+      1)Exetdned Advertsing with 257 bytes of data
+      2)scanning for extended Advertsing.
+   
+   APPLICATION:
+      
+
 Community Support
 *****************
 
