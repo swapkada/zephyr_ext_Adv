@@ -1,0 +1,4 @@
+tests:
+  kernel.interrupt:
+    filter: CONFIG_ARMV7_M_ARMV8_M_MAINLINE
+    tags: core bat_commit

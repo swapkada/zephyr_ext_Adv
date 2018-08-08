@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2017 I-SENSE group of ICCS
+ *
+ * SoC device tree include for STM32F103xE SoCs
+ * where 'x' is replaced for specific SoCs like {R,V,Z}
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <st/stm32f103Xb.dtsi>
+
+/ {
+	soc {
+		spi3: spi@40003C00 {
+			compatible = "st,stm32-spi";
+			#address-cells = <1>;
+			#size-cells = <0>;
+			reg = <0x40003C00 0x400>;
+			interrupts = <51 5>;
+			status = "disabled";
+		};
+	};
+};

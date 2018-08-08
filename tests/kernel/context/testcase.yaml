@@ -1,0 +1,3 @@
+tests:
+  kernel.context:
+    tags: core bat_commit

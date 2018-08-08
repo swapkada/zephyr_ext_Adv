@@ -1,0 +1,8 @@
+sample:
+  description: TBD
+  name: DNS Resolver
+tests:
+  test:
+    harness: net
+    depends_on: netif
+    tags: net dns

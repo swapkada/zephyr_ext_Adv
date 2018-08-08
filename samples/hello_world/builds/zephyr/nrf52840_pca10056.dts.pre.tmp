@@ -1,0 +1,133 @@
+/dts-v1/;
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ chosen { };
+ aliases { };
+};
+/ {
+ soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "simple-bus";
+  interrupt-parent = <&nvic>;
+  ranges;
+  nvic: interrupt-controller@e000e100 {
+   compatible = "arm,v7m-nvic";
+   reg = <0xe000e100 0xc00>;
+   interrupt-controller;
+   #interrupt-cells = <2>;
+  };
+  systick: timer@e000e010 {
+   compatible = "arm,armv7m-systick";
+   reg = <0xe000e010 0x10>;
+   status = "disabled";
+  };
+ };
+};
+/ {
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+  cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-m4f";
+   reg = <0>;
+  };
+ };
+ flash-controller@4001E000 {
+   compatible = "nrf,nrf52-flash-controller";
+   reg = <0x4001E000 0x550>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   label="NRF5_FLASH_DRV_NAME";
+   flash0: flash@0 {
+    compatible = "soc-nv-flash";
+    label = "NRF5_FLASH";
+    reg = <0x00000000 (1024 * 1024)>;
+    write-block-size = <4>;
+   };
+ };
+ sram0: memory@20000000 {
+  device_type = "memory";
+  compatible = "mmio-sram";
+  reg = <0x20000000 (256 * 1024)>;
+ };
+ soc {
+  uart0: uart@40002000 {
+   compatible = "nordic,nrf-uarte", "nordic,nrf-uart";
+   reg = <0x40002000 0x1000>;
+   interrupts = <2 1>;
+   status = "disabled";
+   label = "UART_0";
+  };
+  uart1: uart@40028000 {
+   compatible = "nordic,nrf-uarte";
+   reg = <0x40028000 0x1000>;
+   interrupts = <40 1>;
+   status = "disabled";
+   label = "UART_1";
+  };
+  i2c0: i2c@40003000 {
+   compatible = "nordic,nrf5-i2c";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0x40003000 0x1000>;
+   clock-frequency = <100000>;
+   interrupts = <3 1>;
+   status = "disabled";
+   label = "I2C_0";
+  };
+  i2c1: i2c@40004000 {
+   compatible = "nordic,nrf5-i2c";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0x40004000 0x1000>;
+   clock-frequency = <100000>;
+   interrupts = <4 1>;
+   status = "disabled";
+   label = "I2C_1";
+  };
+ };
+};
+&nvic {
+ arm,num-irq-priority-bits = <3>;
+};
+/ {
+ model = "Nordic PCA10056 Dev Kit";
+ compatible = "nordic,pca10056-dk", "nordic,nrf52840-qiaa",
+       "nordic,nrf52840";
+ chosen {
+  zephyr,console = &uart0;
+  zephyr,sram = &sram0;
+  zephyr,flash = &flash0;
+ };
+};
+&uart0 {
+ compatible = "nordic,nrf-uart";
+ current-speed = <115200>;
+ status = "ok";
+};
+&flash0 {
+ partitions {
+  compatible = "fixed-partitions";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  boot_partition: partition@0 {
+   label = "mcuboot";
+   reg = <0x000000000 0x0000C000>;
+  };
+  slot0_partition: partition@c000 {
+   label = "image-0";
+   reg = <0x0000C000 0x000069000>;
+  };
+  slot1_partition: partition@75000 {
+   label = "image-1";
+   reg = <0x00075000 0x000069000>;
+  };
+  scratch_partition: partition@de000 {
+   label = "image-scratch";
+   reg = <0x000de000 0x0001e000>;
+  };
+ };
+};

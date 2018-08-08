@@ -1,0 +1,4 @@
+tests:
+  test_rtc:
+    tags: drivers
+    depends_on: rtc

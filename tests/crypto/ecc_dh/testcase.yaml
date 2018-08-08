@@ -1,0 +1,6 @@
+tests:
+  crypto.ecc_dh:
+    min_ram: 16
+    slow: true
+    tags: crypto ecc dh
+    timeout: 500

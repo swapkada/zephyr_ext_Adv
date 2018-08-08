@@ -1,0 +1,4 @@
+tests:
+  kernel.threads:
+    arch_exclude: nios2
+    tags: kernel threads userspace

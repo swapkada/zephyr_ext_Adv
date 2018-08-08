@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/0.1841825296/GCCARMEMB_TOOLCHAIN_PATH/delimiter=\:
+environment/project/0.1841825296/GCCARMEMB_TOOLCHAIN_PATH/operation=append
+environment/project/0.1841825296/GCCARMEMB_TOOLCHAIN_PATH/value=~/home/swap/gcc-arm-none-eabi-7-2017-q4-major/
+environment/project/0.1841825296/ZEPHYR_TOOLCHAIN_VARIANT/delimiter=\:
+environment/project/0.1841825296/ZEPHYR_TOOLCHAIN_VARIANT/operation=append
+environment/project/0.1841825296/ZEPHYR_TOOLCHAIN_VARIANT/value=gccarmemb
+environment/project/0.1841825296/append=true
+environment/project/0.1841825296/appendContributed=true
