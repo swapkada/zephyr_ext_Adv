@@ -35,8 +35,9 @@ Supported Features:
 *scanning for extended Advertsing.
 
 * **APPLICATION:**
-*beacon_ble5 :zephyr_ext_Adv/samples/bluetooth/beacon_ble5
-*scanner_ble5 : zephyr_ext_Adv/samples/bluetooth/scanner_ble5
+
+      *beacon_ble5 :zephyr_ext_Adv/samples/bluetooth/beacon_ble5.
+      *scanner_ble5 : zephyr_ext_Adv/samples/bluetooth/scanner_ble5.
       
 
 Community Support
