@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
+#
 # In zsh the value of $0 depends on the FUNCTION_ARGZERO option which is
 # set by default. FUNCTION_ARGZERO, when it is set, sets $0 temporarily
 # to the name of the function/script when executing a shell function or
