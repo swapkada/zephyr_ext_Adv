@@ -29,7 +29,7 @@ Intel x86, ARC, NIOS II, Tensilica Xtensa, and RISC V, and a large number of
 
 BLE5 Support:
 *****************
-BLE advertsing is Supported in both Host and Controller side.
+BLE advertising is Supported on both Host and Controller side.
 
 Supported Features:
 
