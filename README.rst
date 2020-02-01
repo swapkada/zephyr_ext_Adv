@@ -33,7 +33,7 @@ BLE advertsing is Supported in both Host and Controller side.
 
 Supported Features:
 
-* Exetdned Advertsing with 257 bytes of data.
+* Exetdned Advertsing with 254 bytes of data.
 
 * scanning for extended Advertsing.
 
