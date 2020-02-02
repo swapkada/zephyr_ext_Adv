@@ -7,7 +7,7 @@ Overview
 ********
 
 A simple application demonstrating the BLE Broadcaster role functionality by
-advertising data upto 257 bytes with newly introduced Extended Advertsing.
+advertising data upto 254 bytes with newly introduced Extended Advertsing.
 
 
 
